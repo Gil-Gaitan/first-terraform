@@ -4,13 +4,13 @@ In this lab we learn the very basic Terraform commands.
 
 ## Instructions
 
-1. Change directory into the 01-Basic-Commands directory:
+### 1. Change directory into the 01-Basic-Commands directory
 
 ```bash
 cd 01-Basic-Commands
 ```
 
-2. Run the following commands
+### 2. Run the following commands
 
 ```bash
 terraform version
@@ -24,6 +24,7 @@ terraform output
 ```
 
 Here is the explanation of each of these commands:
+
 - `terraform version:` This command displays the currently installed version of Terraform. It is used to verify which version of Terraform you have installed and to ensure that the correct version is being used for your infrastructure.
 
 - `terraform -help:` This command displays a list of available commands and options for Terraform. It is used to get help with Terraform commands and options and to learn how to use Terraform.
@@ -40,19 +41,20 @@ Here is the explanation of each of these commands:
 
 - `terraform output:` This command displays the outputs of your Terraform configuration. It is used to retrieve the values of any output variables that were defined in your Terraform code.
 
-3. Run `docker ps` and `docker images` to check the newly created container
+### 3. Run `docker ps` and `docker images` to check the newly created container
 
 ```bash
 docker ps
 docker images
 ```
 
-4. Go to the nginx URL
+### 4. Go to the nginx URL
+
 If port 8080 doesn't get forwarded automatically, then go to the `PORTS` tab and add port 8080 manually.
 
 Now click on the Globe Icon under Lcal Address in the `PORTS` tab to open the URL for nginx.
 
-5. Now destroy the environment with `terraform destroy`
+### 5. Now destroy the environment with `terraform destroy`
 
 ```bash
 terraform destroy
@@ -63,7 +65,6 @@ terraform destroy
 ## Lab Code Explanation
 
 Terraform is an infrastructure-as-code tool that allows you to define and manage infrastructure resources in a declarative way. This Terraform configuration sets up a Docker container running the Nginx web server with port forwarding from port 8080 on the host machine to port 80 inside the container.
-
 
 Let's go through the code line by line:
 
