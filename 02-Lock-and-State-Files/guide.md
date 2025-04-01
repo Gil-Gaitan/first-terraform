@@ -4,20 +4,20 @@ In this lab we learn about the Lock and State files.
 
 ## Instructions
 
-1. Change directory into the 02-Lock-and-State-Files directory:
+### 1. Change directory into the 02-Lock-and-State-Files directory
 
 ```bash
 cd 02-Lock-and-State-Files
 ```
 
-2. Initialize and Terraform Apply
+### 2. Initialize and Terraform Apply
 
 ```bash
 terraform init
 terraform apply --auto-approve
 ```
 
-3. Examine the `.terraform.lock.hcl` file
+### 3. Examine the `.terraform.lock.hcl` file
 
 The `.terraform.lock.hcl` file is a generated file that Terraform creates when it installs provider dependencies for a Terraform configuration. It contains a list of all the provider dependencies, including their version constraints, that were installed for the Terraform configuration.
 
@@ -27,7 +27,7 @@ When Terraform applies a configuration, it reads the `.terraform.lock.hcl` file 
 
 It is recommended to include the `.terraform.lock.hcl` file in version control along with the Terraform configuration to ensure that all team members and deployment environments are using the same provider versions.
 
-4. Examine the `terraform.tfstate` file
+### 4. Examine the `terraform.tfstate` file
 
 The `terraform.tfstate` file is a generated file that Terraform uses to keep track of the current state of the resources managed by a Terraform configuration. This file contains information about the resources that were created or modified, their current state, and any metadata that is associated with them.
 
@@ -37,15 +37,14 @@ The `terraform.tfstate` file is an important part of the Terraform workflow beca
 
 It is important to store the `terraform.tfstate` file securely and consistently, since it contains sensitive information such as resource IDs, passwords, and access keys. Terraform supports several ways of storing the `terraform.tfstate` file, including local file storage, remote storage solutions like AWS S3 and Azure Blob Storage, and Terraform Cloud.
 
-5. Destroy the environment and re-examine the state file to see what changed. Be very careful when using the `--auto-approve` flag with `terraform apply` or `terraform destroy`. This should not be used in production as it will override the prompt.
+### 5. Destroy the environment and re-examine the state file to see what changed. Be very careful when using the `--auto-approve` flag with `terraform apply` or `terraform destroy`. This should not be used in production as it will override the prompt
 
 ```bash
 terraform destroy --auto-approve
 ```
 
-6. Examine the Docker provider documentation
+### 6. Examine the Docker provider documentation
 
-https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs
+<https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs>
 
 > Congratulations you have finished this lab!
-
