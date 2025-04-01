@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "webserver" {
-  ami           = "ami-08d4ac5b634553e16"
+  ami           = "ami-08d4ac5b634553e16" # can be replaced with a more recent AMI datablock
   instance_type = var.my_instance_type
 }
 
