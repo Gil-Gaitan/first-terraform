@@ -37,9 +37,11 @@ variable "image_tag" {
 variable "internal_port" {
   type        = number
   description = "The internal port number for the container"
+  default     = 80
 }
 
 variable "external_port" {
   type        = number
   description = "The external port number for the container"
+  default     = 8080
 }
